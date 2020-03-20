@@ -1,4 +1,4 @@
-# gregricci.github.io
+# GregRicciCPA.github.io
 Developing Data Products_Leaf Project
 Peer-graded Assignment: R Markdown and Leaflet
 
