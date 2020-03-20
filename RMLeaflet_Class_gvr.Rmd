@@ -1,0 +1,49 @@
+---
+title: "Developing Data Products_Leaf"
+author: "Greg Ricci"
+date: "3/19/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Peer Graded Project R Markdown
+Insstructions:
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! 
+
+
+```{r 1}
+library(leaflet)
+library(leaflet.providers)
+library(knitr)
+```
+
+## My Pit Beef Map
+
+Pit beef is a dish of roast beef prepared over a charcoal fire, commonly using top round cuts of beef. The cooked roast is sliced thinly and often used in sandwiches, accompanied by horseradish and sometimes barbecue sauce. Unlike barbecue, the meat is cooked quickly at high temperatures, served rare, and has a light smoke flavor. 
+
+The preparation is a local specialty in the area around Baltimore, Maryland. The origin of the specific name "pit beef" dates to the 1970s on Baltimore's east side, along Pulaski Highway, and became popular in the 1980s
+
+*Best Pit Beef in Baltimore*
+
+Popular pit-beef outlets in the Baltimore, Maryland USA region serving namesake sandwiches and homestyle sides. Best statement related to the quality of the food, the Cleaniness of the establishment and the customer service level.
+ 
+
+```{r 3, echo=FALSE}
+my_map2 <- leaflet() %>% addTiles() 
+my_map2 <- my_map2 %>% addMarkers(lat=39.3070, lng= -76.7541, popup="Pioneer Pit Beef")
+my_map2 <- my_map2 %>% addMarkers(lat=39.1996, lng= -76.6577, popup="Linthicum Pit Beef")
+my_map2 <- my_map2 %>% addMarkers(lat=39.3016, lng= -76.5481, popup="Chaps Pit Beef")
+my_map2 <- my_map2 %>% addMarkers(lat=39.3581, lng= -76.6107, popup="The Rolling Grill")
+
+my_map2
+```
+
+*end*
+
